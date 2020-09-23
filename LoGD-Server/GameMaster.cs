@@ -50,7 +50,6 @@ namespace LoGD.Server
                     //check allowednavs in DB
                     //allowed
                     return scenes[page].Show(userid, getValues, db);
-
                 }
                 return "Badnav";
                 //return last page again;

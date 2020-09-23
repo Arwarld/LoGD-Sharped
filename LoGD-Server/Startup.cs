@@ -2,12 +2,16 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Hosting;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.IO;
 using System.Net.Mime;
+using System.Reflection;
 using System.Runtime.InteropServices.ComTypes;
 using System.Threading;
 
@@ -20,7 +24,6 @@ namespace LoGD.Server
             services.AddSession();
             services.AddMvc();
         }
-
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
@@ -29,8 +32,9 @@ namespace LoGD.Server
             }
             app.UseRouting();
             app.UseSession();
+            app.UseStaticFiles(new StaticFileOptions { FileProvider = new PhysicalFileProvider(System.Diagnostics.Process.GetCurrentProcess().MainModule.FileName.Replace("LoGD-Server.exe", "") + "Game/Images"), RequestPath = new PathString("/images") });
+            app.UseStaticFiles(new StaticFileOptions { FileProvider = new PhysicalFileProvider(System.Diagnostics.Process.GetCurrentProcess().MainModule.FileName.Replace("LoGD-Server.exe", "") + "Game/Templates/Images"), RequestPath = new PathString("/templates") });
             GameMaster g = new GameMaster();
-
             app.UseEndpoints(endpoints =>
             {
                 foreach (string templateCSS in GameMaster.TemplateCSS.Keys)
