@@ -1,18 +1,13 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using LoGD.Game.Templates;
-using LoGD.Game;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 
-namespace LoGD
+namespace LoGD.Server
 {
     public class Startup
     {
@@ -39,7 +34,7 @@ namespace LoGD
                 {
                     endpoints.MapGet("templates/"+ templateCSS + ".css", async context =>
                     {
-                        await context.Response.WriteAsync(GameMaster.TemplateCSS[templateCSS]);
+                        await context.Response.WriteAsync(GameMaster.TemplateCSS[templateCSS].Css);
                     });
                 }
                 endpoints.MapGet("{location?}", async context =>
