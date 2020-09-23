@@ -10,148 +10,172 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="Game\Templates\Images\ailean\bullet.gif">
+    <None Update="Game\Templates\Files\ailean.css">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Game\Templates\Images\ailean\check.gif">
+    <None Update="Game\Templates\Files\ailean\bullet.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Game\Templates\Images\ailean\larrow.gif">
+    <None Update="Game\Templates\Files\ailean\check.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Game\Templates\Images\ailean\logo.jpg">
+    <None Update="Game\Templates\Files\ailean\larrow.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Game\Templates\Images\ailean\navhdr.gif">
+    <None Update="Game\Templates\Files\ailean\logo.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Game\Templates\Images\ailean\rarrow.gif">
+    <None Update="Game\Templates\Files\ailean\navhdr.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Game\Templates\Images\amber\ambdragon.gif">
+    <None Update="Game\Templates\Files\ailean\rarrow.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Game\Templates\Images\amber\ambtitle.gif">
+    <None Update="Game\Templates\Files\amber.css">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Game\Templates\Images\blarg\login.gif">
+    <None Update="Game\Templates\Files\amber\ambdragon.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Game\Templates\Images\blarg\mainhdr.gif">
+    <None Update="Game\Templates\Files\amber\ambtitle.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Game\Templates\Images\blarg\tblhdr.gif">
+    <None Update="Game\Templates\Files\aware2.css">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Game\Templates\Images\cupertino\barbottom.gif">
+    <None Update="Game\Templates\Files\blarg.css">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Game\Templates\Images\cupertino\bartop.gif">
+    <None Update="Game\Templates\Files\blarg\login.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Game\Templates\Images\cupertino\boxleft.gif">
+    <None Update="Game\Templates\Files\blarg\mainhdr.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Game\Templates\Images\cupertino\boxll.gif">
+    <None Update="Game\Templates\Files\blarg\tblhdr.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Game\Templates\Images\cupertino\boxlower.gif">
+    <None Update="Game\Templates\Files\Classic.css">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Game\Templates\Images\cupertino\boxlr.gif">
+    <None Update="Game\Templates\Files\cupertino.css">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Game\Templates\Images\cupertino\boxright.gif">
+    <None Update="Game\Templates\Files\cupertino\barbottom.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Game\Templates\Images\cupertino\boxul.gif">
+    <None Update="Game\Templates\Files\cupertino\bartop.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Game\Templates\Images\cupertino\boxupper.gif">
+    <None Update="Game\Templates\Files\cupertino\boxleft.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Game\Templates\Images\cupertino\boxur.gif">
+    <None Update="Game\Templates\Files\cupertino\boxll.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Game\Templates\Images\cupertino\navheadtop.gif">
+    <None Update="Game\Templates\Files\cupertino\boxlower.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Game\Templates\Images\cupertino\pinstripe.GIF">
+    <None Update="Game\Templates\Files\cupertino\boxlr.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Game\Templates\Images\cupertino\steel.GIF">
+    <None Update="Game\Templates\Files\cupertino\boxright.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Game\Templates\Images\cupertino\tab.GIF">
+    <None Update="Game\Templates\Files\cupertino\boxul.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Game\Templates\Images\cupertino\trans.gif">
+    <None Update="Game\Templates\Files\cupertino\boxupper.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Game\Templates\Images\desert\blc.gif">
+    <None Update="Game\Templates\Files\cupertino\boxur.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Game\Templates\Images\desert\brc.gif">
+    <None Update="Game\Templates\Files\cupertino\navheadtop.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Game\Templates\Images\desert\btm.gif">
+    <None Update="Game\Templates\Files\cupertino\pinstripe.GIF">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Game\Templates\Images\desert\logindragon.gif">
+    <None Update="Game\Templates\Files\cupertino\steel.GIF">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Game\Templates\Images\desert\logo.jpg">
+    <None Update="Game\Templates\Files\cupertino\tab.GIF">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Game\Templates\Images\desert\spacer.gif">
+    <None Update="Game\Templates\Files\cupertino\trans.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Game\Templates\Images\desert\tlc.gif">
+    <None Update="Game\Templates\Files\desert.css">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Game\Templates\Images\desert\tlt.gif">
+    <None Update="Game\Templates\Files\desert\blc.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Game\Templates\Images\desert\tm.gif">
+    <None Update="Game\Templates\Files\desert\brc.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Game\Templates\Images\desert\trc.gif">
+    <None Update="Game\Templates\Files\desert\btm.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Game\Templates\Images\desert\trt.gif">
+    <None Update="Game\Templates\Files\desert\logindragon.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Game\Templates\Files\desert\logo.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Game\Templates\Files\desert\spacer.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Game\Templates\Files\desert\tlc.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Game\Templates\Files\desert\tlt.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Game\Templates\Files\desert\tm.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Game\Templates\Files\desert\trc.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Game\Templates\Files\desert\trt.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="Game\Images\headbkg.GIF">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Game\Templates\Images\jade\blc.gif">
+    <None Update="Game\Templates\Files\jade.css">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Game\Templates\Images\jade\brc.gif">
+    <None Update="Game\Templates\Files\jade\blc.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Game\Templates\Images\jade\btm.gif">
+    <None Update="Game\Templates\Files\jade\brc.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Game\Templates\Images\jade\logo.jpg">
+    <None Update="Game\Templates\Files\jade\btm.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Game\Templates\Images\jade\spacer.gif">
+    <None Update="Game\Templates\Files\jade\logo.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Game\Templates\Images\jade\tlc.gif">
+    <None Update="Game\Templates\Files\jade\spacer.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Game\Templates\Images\jade\tlt.gif">
+    <None Update="Game\Templates\Files\jade\tlc.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Game\Templates\Images\jade\tm.gif">
+    <None Update="Game\Templates\Files\jade\tlt.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Game\Templates\Images\jade\trc.gif">
+    <None Update="Game\Templates\Files\jade\tm.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Game\Templates\Images\jade\trt.gif">
+    <None Update="Game\Templates\Files\jade\trc.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Game\Templates\Files\jade\trt.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="Game\Images\logindragon.gif">
@@ -169,67 +193,73 @@
     <None Update="Game\Images\Medallion-Yellow.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Game\Templates\Images\mer\blc.gif">
+    <None Update="Game\Templates\Files\mer.css">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Game\Templates\Images\mer\brc.gif">
+    <None Update="Game\Templates\Files\mer\blc.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Game\Templates\Images\mer\btm.gif">
+    <None Update="Game\Templates\Files\mer\brc.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Game\Templates\Images\mer\logo.jpg">
+    <None Update="Game\Templates\Files\mer\btm.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Game\Templates\Images\mer\spacer.gif">
+    <None Update="Game\Templates\Files\mer\logo.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Game\Templates\Images\mer\tlc.gif">
+    <None Update="Game\Templates\Files\mer\spacer.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Game\Templates\Images\mer\tlt.gif">
+    <None Update="Game\Templates\Files\mer\tlc.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Game\Templates\Images\mer\tm.gif">
+    <None Update="Game\Templates\Files\mer\tlt.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Game\Templates\Images\mer\trc.gif">
+    <None Update="Game\Templates\Files\mer\tm.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Game\Templates\Images\mer\trt.gif">
+    <None Update="Game\Templates\Files\mer\trc.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Game\Templates\Files\mer\trt.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="Game\Images\mightyesig.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Game\Templates\Images\mourn\blc.gif">
+    <None Update="Game\Templates\Files\mourn.css">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Game\Templates\Images\mourn\brc.gif">
+    <None Update="Game\Templates\Files\mourn\blc.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Game\Templates\Images\mourn\btm.gif">
+    <None Update="Game\Templates\Files\mourn\brc.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Game\Templates\Images\mourn\logo.jpg">
+    <None Update="Game\Templates\Files\mourn\btm.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Game\Templates\Images\mourn\spacer.gif">
+    <None Update="Game\Templates\Files\mourn\logo.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Game\Templates\Images\mourn\tlc.gif">
+    <None Update="Game\Templates\Files\mourn\spacer.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Game\Templates\Images\mourn\tlt.gif">
+    <None Update="Game\Templates\Files\mourn\tlc.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Game\Templates\Images\mourn\tm.gif">
+    <None Update="Game\Templates\Files\mourn\tlt.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Game\Templates\Images\mourn\trc.gif">
+    <None Update="Game\Templates\Files\mourn\tm.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Game\Templates\Images\mourn\trt.gif">
+    <None Update="Game\Templates\Files\mourn\trc.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Game\Templates\Files\mourn\trt.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="Game\Images\new.gif">
@@ -253,28 +283,34 @@
     <None Update="Game\Images\paypal3.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Game\Templates\Images\redmond\curvey.GIF">
+    <None Update="Game\Templates\Files\Red.css">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Game\Templates\Images\redmond\ll.gif">
+    <None Update="Game\Templates\Files\redmond.css">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Game\Templates\Images\redmond\lr.gif">
+    <None Update="Game\Templates\Files\redmond\curvey.GIF">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Game\Templates\Images\redmond\title.gif">
+    <None Update="Game\Templates\Files\redmond\ll.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Game\Templates\Images\redmond\ul.gif">
+    <None Update="Game\Templates\Files\redmond\lr.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Game\Templates\Images\redmond\ur.gif">
+    <None Update="Game\Templates\Files\redmond\title.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Game\Templates\Images\Red\reddragon.gif">
+    <None Update="Game\Templates\Files\redmond\ul.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Game\Templates\Images\Red\redtitle.gif">
+    <None Update="Game\Templates\Files\redmond\ur.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Game\Templates\Files\Red\reddragon.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Game\Templates\Files\Red\redtitle.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="Game\Images\rule.gif">
@@ -283,13 +319,16 @@
     <None Update="Game\Images\somerights20.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Game\Templates\Images\teksolo\bar.gif">
+    <None Update="Game\Templates\Files\teksolo.css">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Game\Templates\Images\teksolo\bkg.gif">
+    <None Update="Game\Templates\Files\teksolo\bar.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Game\Templates\Images\teksolo\corner.jpg">
+    <None Update="Game\Templates\Files\teksolo\bkg.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Game\Templates\Files\teksolo\corner.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="Game\Images\title.gif">
@@ -301,52 +340,64 @@
     <None Update="Game\Images\uscroll.GIF">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Game\Templates\Images\vcpp\ftrtabs.gif">
+    <None Update="Game\Templates\Files\vcpp.css">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Game\Templates\Images\vcpp\login.gif">
+    <None Update="Game\Templates\Files\vcpp\ftrtabs.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Game\Templates\Images\vcpp\mainhdr.gif">
+    <None Update="Game\Templates\Files\vcpp\login.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Game\Templates\Images\vcpp\tblhdr.gif">
+    <None Update="Game\Templates\Files\vcpp\mainhdr.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Game\Templates\Images\volcano\blc.gif">
+    <None Update="Game\Templates\Files\vcpp\tblhdr.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Game\Templates\Images\volcano\brc.gif">
+    <None Update="Game\Templates\Files\volcano.css">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Game\Templates\Images\volcano\btm.gif">
+    <None Update="Game\Templates\Files\volcano\blc.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Game\Templates\Images\volcano\logo.gif">
+    <None Update="Game\Templates\Files\volcano\brc.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Game\Templates\Images\volcano\logo.jpg">
+    <None Update="Game\Templates\Files\volcano\btm.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Game\Templates\Images\volcano\logo2.gif">
+    <None Update="Game\Templates\Files\volcano\logo.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Game\Templates\Images\volcano\spacer.gif">
+    <None Update="Game\Templates\Files\volcano\logo.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Game\Templates\Images\volcano\tlc.gif">
+    <None Update="Game\Templates\Files\volcano\logo2.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Game\Templates\Images\volcano\tlt.gif">
+    <None Update="Game\Templates\Files\volcano\spacer.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Game\Templates\Images\volcano\tm.gif">
+    <None Update="Game\Templates\Files\volcano\tlc.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Game\Templates\Images\volcano\trc.gif">
+    <None Update="Game\Templates\Files\volcano\tlt.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Game\Templates\Images\volcano\trt.gif">
+    <None Update="Game\Templates\Files\volcano\tm.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Game\Templates\Files\volcano\trc.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Game\Templates\Files\volcano\trt.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Game\Templates\Files\yar2.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Game\Templates\Files\yarbrough.css">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>

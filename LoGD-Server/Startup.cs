@@ -33,17 +33,10 @@ namespace LoGD.Server
             app.UseRouting();
             app.UseSession();
             app.UseStaticFiles(new StaticFileOptions { FileProvider = new PhysicalFileProvider(System.Diagnostics.Process.GetCurrentProcess().MainModule.FileName.Replace("LoGD-Server.exe", "") + "Game/Images"), RequestPath = new PathString("/images") });
-            app.UseStaticFiles(new StaticFileOptions { FileProvider = new PhysicalFileProvider(System.Diagnostics.Process.GetCurrentProcess().MainModule.FileName.Replace("LoGD-Server.exe", "") + "Game/Templates/Images"), RequestPath = new PathString("/templates") });
+            app.UseStaticFiles(new StaticFileOptions { FileProvider = new PhysicalFileProvider(System.Diagnostics.Process.GetCurrentProcess().MainModule.FileName.Replace("LoGD-Server.exe", "") + "Game/Templates/Files"), RequestPath = new PathString("/templates") });
             GameMaster g = new GameMaster();
             app.UseEndpoints(endpoints =>
             {
-                foreach (string templateCSS in GameMaster.TemplateCSS.Keys)
-                {
-                    endpoints.MapGet("templates/" + templateCSS + ".css", async context =>
-                     {
-                         await context.Response.WriteAsync(GameMaster.TemplateCSS[templateCSS].Css);
-                     });
-                }
                 endpoints.Map("{location}.{params}", async context =>
                 {
                     string location = context.Request.RouteValues["location"].ToString();

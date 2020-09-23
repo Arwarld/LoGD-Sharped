@@ -2,7 +2,7 @@
 {
     public class Template
 	{
-		public Template(string name, string popuphead, string popupfoot, string header, string footer, string statstart, string stathead, string statrow, string statbuff, string statend, string navhead, string navhelp, string navitem, string petitioncount, string adwrapper, string login, string loginfull, string collapse, string css)
+		public Template(string name, string popuphead, string popupfoot, string header, string footer, string statstart, string stathead, string statrow, string statbuff, string statend, string navhead, string navhelp, string navitem, string petitioncount, string adwrapper, string login, string loginfull, string collapse)
 		{
 			this.popuphead = popuphead;
 			this.popupfoot = popupfoot;
@@ -21,7 +21,6 @@
 			this.login = login;
 			this.loginfull = loginfull;
 			this.collapse = collapse;
-			this.css = css;
 			this.name = name;
 		}
 		protected string popuphead;
@@ -41,7 +40,6 @@
 		protected string login;
 		protected string loginfull;
 		protected string collapse;
-		protected string css;
 		protected string name;
 		public string Popuphead { get { return popuphead; } }
 		public string Popupfoot { get { return popupfoot; } }
@@ -60,7 +58,6 @@
 		public string Login { get { return login; } }
 		public string Loginfull { get { return loginfull; } }
 		public string Collapse { get { return collapse; } }
-		public string Css { get { return css; } }
 		public string Name { get { return name; } }
 	}
 }
