@@ -4,21 +4,23 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Net.Mime;
+using System.Runtime.InteropServices.ComTypes;
+using System.Threading;
 
 namespace LoGD.Server
 {
     public class Startup
     {
-        // This method gets called by the runtime. Use this method to add services to the container.
-        // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddSession();
             services.AddMvc();
         }
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
@@ -28,45 +30,46 @@ namespace LoGD.Server
             app.UseRouting();
             app.UseSession();
             GameMaster g = new GameMaster();
+
             app.UseEndpoints(endpoints =>
             {
                 foreach (string templateCSS in GameMaster.TemplateCSS.Keys)
                 {
-                    endpoints.MapGet("templates/"+ templateCSS + ".css", async context =>
-                    {
-                        await context.Response.WriteAsync(GameMaster.TemplateCSS[templateCSS].Css);
-                    });
+                    endpoints.MapGet("templates/" + templateCSS + ".css", async context =>
+                     {
+                         await context.Response.WriteAsync(GameMaster.TemplateCSS[templateCSS].Css);
+                     });
                 }
-                endpoints.MapGet("{location?}", async context =>
-                {
-                    string location = "home";
-                    if (context.Request.RouteValues.ContainsKey("location"))
-                        location = context.Request.RouteValues["location"].ToString();
-                    await context.Response.WriteAsync(g.BuildPage(context.Session, location));
-                });
-                endpoints.MapGet("{location}/{param1}={value1}", async context =>
+                endpoints.Map("{location}.{params}", async context =>
                 {
                     string location = context.Request.RouteValues["location"].ToString();
-                    Dictionary<string, string> getParams = new Dictionary<string, string>();
-                    getParams.Add(context.Request.RouteValues["param1"].ToString(), context.Request.RouteValues["value1"].ToString());
-                    await context.Response.WriteAsync(g.BuildPage(context.Session, location, new ReadOnlyDictionary<string, string>(getParams)));
+                    string parameters = context.Request.RouteValues["params"].ToString();
+                    if (!parameters.Contains(".") && !location.Contains(".") && parameters != "" && parameters.Length > 4 && parameters.Substring(0, 4) == "php?")
+                    {
+                        parameters = parameters.Substring(4);
+                        Dictionary<string, string> getParams = new Dictionary<string, string>();
+                        foreach (string pair in context.Request.RouteValues["params"].ToString().Split('&'))
+                        {
+                            string[] values = pair.Split('=');
+                            if (values.Length == 2)
+                                getParams.Add(values[0], values[1]);
+                            else if (values.Length == 1)
+                                getParams.Add(values[0], null);
+                        }
+                        await context.Response.WriteAsync(g.BuildPage(context, location, new ReadOnlyDictionary<string, string>(getParams)));
+                    }
+                    else if (!location.Contains(".") && (parameters == "php" || parameters == "php?"))
+                        await context.Response.WriteAsync(g.BuildPage(context, location));
+                    else
+                    {
+                        context.Response.StatusCode = 302;
+                        context.Response.Headers.Add("Location", "/home.php");
+                    }
                 });
-                endpoints.MapGet("{location}/{param1}={value1}/{param2}={value2}", async context =>
+                endpoints.Map("/", async context =>
                 {
-                    string location = context.Request.RouteValues["location"].ToString();
-                    Dictionary<string, string> getParams = new Dictionary<string, string>();
-                    getParams.Add(context.Request.RouteValues["param1"].ToString(), context.Request.RouteValues["value1"].ToString());
-                    getParams.Add(context.Request.RouteValues["param2"].ToString(), context.Request.RouteValues["value2"].ToString());
-                    await context.Response.WriteAsync(g.BuildPage(context.Session, location, new ReadOnlyDictionary<string, string>(getParams)));
-                });
-                endpoints.MapGet("{location}/{param1}={value1}/{param2}={value2}/{param3}={value3}", async context =>
-                {
-                    string location = context.Request.RouteValues["location"].ToString();
-                    Dictionary<string, string> getParams = new Dictionary<string, string>();
-                    getParams.Add(context.Request.RouteValues["param1"].ToString(), context.Request.RouteValues["value1"].ToString());
-                    getParams.Add(context.Request.RouteValues["param2"].ToString(), context.Request.RouteValues["value2"].ToString());
-                    getParams.Add(context.Request.RouteValues["param3"].ToString(), context.Request.RouteValues["value3"].ToString());
-                    await context.Response.WriteAsync(g.BuildPage(context.Session, location, new ReadOnlyDictionary<string, string>(getParams)));
+                    context.Response.StatusCode = 302;
+                    context.Response.Headers.Add("Location", "/home.php");                    
                 });
             });
         }

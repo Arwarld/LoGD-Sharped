@@ -34,23 +34,22 @@ namespace LoGD.Server
         private static Dictionary<string, Template> templateCSS = new Dictionary<string, Template>();
         private static Dictionary<string, Scene> scenes = new Dictionary<string, Scene>();
         public static readonly ReadOnlyDictionary<string, Template> TemplateCSS = new ReadOnlyDictionary<string, Template>(templateCSS);
-
-        public string BuildPage(ISession context, string page)
+        public string BuildPage(HttpContext context, string page)
         {
             return BuildPage(context, page, new ReadOnlyDictionary<string, string>(new Dictionary<string, string>()));
         }
-        public string BuildPage(ISession context, string page, ReadOnlyDictionary<string, string> getValues)
+        public string BuildPage(HttpContext context, string page, ReadOnlyDictionary<string, string> getValues)
         {
-            if (context.Keys.Contains("loggedin") && context.GetInt32("loggedin") == 1 && context.Keys.Contains("userid"))
+            if (context.Session.Keys.Contains("loggedin") && context.Session.GetInt32("loggedin") == 1 && context.Session.Keys.Contains("userid"))
             {
-                int userid = (int)context.GetInt32("userid");
+                int userid = (int)context.Session.GetInt32("userid");
                 if (scenes.ContainsKey(page))
                 {
                     if (scenes[page].OverrideForcedNav)
-                        return (string)scenes[page].Show( userid, getValues, db);
+                        return scenes[page].Show(userid, getValues, db);
                     //check allowednavs in DB
                     //allowed
-                    return (string)scenes[page].Show( userid, getValues, db );
+                    return scenes[page].Show(userid, getValues, db);
 
                 }
                 return "Badnav";
@@ -59,8 +58,8 @@ namespace LoGD.Server
             else
             {
                 if (scenes.ContainsKey(page) && scenes[page].AllowAnonymous)
-                    return (string)scenes[page].Show( -1, getValues, db );
-                return (string)scenes["home"].Show( -1, getValues, db );
+                    return scenes[page].Show(-1, getValues, db);
+                return scenes["home"].Show(-1, getValues, db);
             }
         }
     }
