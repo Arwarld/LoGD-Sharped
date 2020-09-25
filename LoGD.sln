@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30503.244
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LoGD-Server", "LoGD-Server\LoGD-Server.csproj", "{3B76C128-253C-4FE1-B988-2D51871C80EA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoGD-Core", "LoGD-Core\LoGD-Core.csproj", "{EBA067F5-0A03-45E7-8307-40F804D1AAB6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LoGD-Core", "LoGD-Core\LoGD-Core.csproj", "{EBA067F5-0A03-45E7-8307-40F804D1AAB6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
