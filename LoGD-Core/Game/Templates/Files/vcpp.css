@@ -5,29 +5,32 @@
 */
 
 /** tables **/
-table {
-}
+table { }
+
 td {
     font-family: "Helvetica", "Arial", sans-serif;
     font-size: 11px;
 }
 
 /** links **/
+
 a {
     color: #000066;
     text-decoration: none;
 }
 
 /** input fields (e.g. village chats) **/
+
 input {
-    font-family: "Courier New", "Lucida Console", monospace;
-    font-size: 11px;
     background-color: #ece7df;
     border: 1px solid #666666;
     color: #222222;
+    font-family: "Courier New", "Lucida Console", monospace;
+    font-size: 11px;
 }
 
 /** select boxes (e.g. user preference drop-downs) **/
+
 select {
     background-color: #ece7df;
     border: 1px solid #666666;
@@ -39,50 +42,55 @@ select {
 */
 
 /** the main page heading (e.g. "Degolburg, the Capital City", "LoGD News") **/
+
 .pagetitle {
+    color: #000000;
     font-family: "Helvetica", "Arial", sans-serif;
     font-size: 16px;
-    font-weight: bold;
     font-style: italic;
-    color: #000000;
+    font-weight: bold;
 }
 
 /** nav menu categories (e.g. City Gates, Store Street, Info) **/
+
 .navhead {
-    text-decoration: none;
-    width: 200px;
-    border: thin #cccccc;
-    height: auto;
-    padding: 1px;
-    line-height: 18px;
-    float: left;
-    clear: none;
     background-color: #ffffff;
-    font-weight: bold;
+    border: thin #cccccc;
+    clear: none;
     color: #000000;
     cursor: default;
+    float: left;
+    font-weight: bold;
+    height: auto;
+    line-height: 18px;
+    padding: 1px;
     text-align: left;
+    text-decoration: none;
+    width: 200px;
 }
 
 /** help for nav menu categories **/
+
 .navhelp {
-    text-decoration: none;
-    width: 200px;
+    border: thin none #003366;
+    clear: none;
+    cursor: default;
+    float: left;
     height: auto;
     padding: 1px;
-    float: left;
-    clear: none;
-    border: thin none #003366;
-    cursor: default;
+    text-decoration: none;
+    width: 200px;
 }
 
 /** nav hot keys (e.g. [F]orest, [T]ravel) **/
+
 .navhi {
     color: #0000cc;
     text-decoration: underline;
 }
 
 /** input fields (e.g. the textarea in YOMs) **/
+
 .input {
     background-color: #ece7df;
     border: 1px solid #666666;
@@ -90,228 +98,328 @@ select {
 }
 
 /** input buttons (e.g. Submit, Search, Add) **/
+
 .button {
-    font-family: "Courier New", "Lucida Console", monospace;
-    font-size: 12px;  
-    color: #ffffff;  
-    background-color: #938f87;  
-    border-top: 1px solid #cccccc;  
-    border-left: 1px solid #cccccc;  
-    border-right: 1px solid #333333;  
+    background-color: #938f87;
     border-bottom: 1px solid #333333;
+    border-left: 1px solid #cccccc;
+    border-right: 1px solid #333333;
+    border-top: 1px solid #cccccc;
+    color: #ffffff;
+    font-family: "Courier New", "Lucida Console", monospace;
+    font-size: 12px;
 }
 
 /** text colours **/
-.colDkBlue    { color: #000066; }
-.colDkGreen   { color: #006600; }
-.colDkCyan    { color: #006666; }
-.colDkRed     { color: #660000; }
+
+.colDkBlue { color: #000066; }
+
+.colDkGreen { color: #006600; }
+
+.colDkCyan { color: #006666; }
+
+.colDkRed { color: #660000; }
+
 .colDkMagenta { color: #660066; }
-.colDkYellow  { color: #666600; }
-.colDkWhite   { color: #666666; }
-.colLtBlue    { color: #0000aa; }
-.colLtGreen   { color: #00aa00; }
-.colLtCyan    { color: #00aaaa; }
-.colLtRed     { color: #aa0000; }
+
+.colDkYellow { color: #666600; }
+
+.colDkWhite { color: #666666; }
+
+.colLtBlue { color: #0000aa; }
+
+.colLtGreen { color: #00aa00; }
+
+.colLtCyan { color: #00aaaa; }
+
+.colLtRed { color: #aa0000; }
+
 .colLtMagenta { color: #aa00aa; }
-.colLtYellow  { color: #aaaa00; }
-.colLtWhite   { color: #333333; }
-.colLtBlack   { color: #999999; }
-.colDkOrange  { color: #994400; }
-.colLtOrange  { color: #ff9900; }
-.colBlue  		{ color: #0070FF; }
-.colLime  		{ color: #DDFFBB; }
-.colBlack  		{ color: #000000; }
-.colRose 		{ color: #EEBBEE; }
-.colblueviolet 	{ color: #9A5BEE; }
-.coliceviolet	{ color: #AABBEE; }
-.colLtBrown 	{ color: #F8DB83; }
-.colDkBrown 	{ color: #6b563f; }
-.colXLtGreen	{ color: #aaff99; }
-.colAttention 	{ background-color: #00FF00; color: #FF0000; }
-.colWhiteBlack 	{ background-color: #FFFFFF; color: #000000; }
-.colBack  		{ background-color: #00FFFF; color: #000000; }
-.colbeige  { color: #F5F5DC; }
-.colkhaki  { color: #F0E68C; }
-.coldarkkhaki  { color: #BDB76B; }
-.colaquamarine  { color: #7FFFD4; }
-.coldarkseagreen  { color: #8FBC8F; }
-.collightsalmon  { color: #FFA07A; }
-.colsalmon  { color: #FA8072; }
-.colwheat  { color: #F5DEB3; }
-.coltan  { color: #D2B48C; }.colLtLinkBlue { color: #0099FF; }
+
+.colLtYellow { color: #aaaa00; }
+
+.colLtWhite { color: #333333; }
+
+.colLtBlack { color: #999999; }
+
+.colDkOrange { color: #994400; }
+
+.colLtOrange { color: #ff9900; }
+
+.colBlue { color: #0070FF; }
+
+.colLime { color: #DDFFBB; }
+
+.colBlack { color: #000000; }
+
+.colRose { color: #EEBBEE; }
+
+.colblueviolet { color: #9A5BEE; }
+
+.coliceviolet { color: #AABBEE; }
+
+.colLtBrown { color: #F8DB83; }
+
+.colDkBrown { color: #6b563f; }
+
+.colXLtGreen { color: #aaff99; }
+
+.colAttention {
+    background-color: #00FF00;
+    color: #FF0000;
+}
+
+.colWhiteBlack {
+    background-color: #FFFFFF;
+    color: #000000;
+}
+
+.colBack {
+    background-color: #00FFFF;
+    color: #000000;
+}
+
+.colbeige { color: #F5F5DC; }
+
+.colkhaki { color: #F0E68C; }
+
+.coldarkkhaki { color: #BDB76B; }
+
+.colaquamarine { color: #7FFFD4; }
+
+.coldarkseagreen { color: #8FBC8F; }
+
+.collightsalmon { color: #FFA07A; }
+
+.colsalmon { color: #FA8072; }
+
+.colwheat { color: #F5DEB3; }
+
+.coltan { color: #D2B48C; }
+
+.colLtLinkBlue { color: #0099FF; }
+
 .colDkLinkBlue { color: #006BB3; }
+
 .colDkRust { color: #8D6060; }
+
 .colLtRust { color: #B07878; }
+
 .colMdBlue { color: #0000F0; }
+
 .colMdGrey { color: #DDDDDD; }
+
 .colburlywood { color: #DEB887; }
 
 /** table rows (e.g. Game Setup Info, Hall o' Fame) **/
-.trhead  { background-color:#605c54; color:#ffffff; }
-.trlight { background-color:#ece7df; color:#333333; }
-.trdark  { background-color:#c6c2ba; color:#333333; }
-.trhilight { background-color: #d4d0c8; color: #333333}
+
+.trhead {
+    background-color: #605c54;
+    color: #ffffff;
+}
+
+.trlight {
+    background-color: #ece7df;
+    color: #333333;
+}
+
+.trdark {
+    background-color: #c6c2ba;
+    color: #333333;
+}
+
+.trhilight {
+    background-color: #d4d0c8;
+    color: #333333
+}
 
 /*  --------------------------------------------------------------------
 **  Specific Tags and Classes
 */
 
 /** links - navigation **/
-a.nav { /* nav link (e.g. Forest, Quit, Travel) */
-    text-decoration: none;
-    width: 182px;
+
+a.nav {
+    clear: none;
+    float: left;
     height: auto;
     padding: 1px 1px 1px 20px;
-    float: left; 
-    clear: none;
+    /* nav link (e.g. Forest, Quit, Travel) */
+    text-decoration: none;
+    width: 182px;
 }
+
 a:hover.nav { /* nav link on mouseover */
     background-color: #ece7df;
 }
 
 /** links - motd **/
-a.motd { /* for motd, yom, and petition */
-    text-decoration: none;
-    text-align: center;
-    color:#000000;
-    width: 100px;
-    height: 14px;
-    clear: none;
+
+a.motd {
     background-color: #d4d0c8;
-}
-a:hover.motd { /* mouseover for motd, yom, and petition */
+    clear: none;
+    color: #000000;
     height: 14px;
+    text-align: center;
+    /* for motd, yom, and petition */
+    text-decoration: none;
     width: 100px;
+}
+
+a:hover.motd {
     background-color: #d4d0c8;
     color: #aa0000;
-}
-a.hotmotd { /* when a new motd or yom is available */
-    font-weight: bold;
-    text-decoration: none;
-    text-align: center;
-    color:#aa0000;
+    /* mouseover for motd, yom, and petition */
+    height: 14px;
     width: 100px;
-    height: auto;
-    clear: none;
+}
+
+a.hotmotd {
     background-color: #d4d0c8;
+    clear: none;
+    color: #aa0000;
+    /* when a new motd or yom is available */
+    font-weight: bold;
+    height: auto;
+    text-align: center;
+    text-decoration: none;
+    width: 100px;
 }
 
 /** links - translator tool **/
-a.t { 
-    width: 10px;
-    height: 10px;
+
+a.t {
+    background-color: #ffffff;
     border: 1px dotted #0000ff;
-    background-color: #ffffff;
     color: #000000;
     font-size: 10px;
-    text-decoration: none;
-    padding-left: 1px;
-    padding-right: 1px;
-}
-a.thot { 
-    width: 10px;
     height: 10px;
-    border: 1px solid #ff0000;
-    background-color: #ffffff;
-    color: #000000;
-    font-size: 10px;
-    text-decoration: none;
     padding-left: 1px;
     padding-right: 1px;
+    text-decoration: none;
+    width: 10px;
+}
+
+a.thot {
+    background-color: #ffffff;
+    border: 1px solid #ff0000;
+    color: #000000;
+    font-size: 10px;
+    height: 10px;
+    padding-left: 1px;
+    padding-right: 1px;
+    text-decoration: none;
+    width: 10px;
 }
 
 /** tables - login **/
-table.login { 
-    height: 200px;
-    width: 232px;
+
+table.login {
     background-image: url(vcpp/login.gif);
     background-repeat: no-repeat;
+    height: 200px;
+    width: 232px;
 }
 
 /** tables - navigation **/
+
 table.nav {
     background-color: #ffffff;
     border: medium ridge #eeeeee;
     width: 200px;
 }
+
 td.nav a.thot {
-	position: absolute;
-	left: 0px;
-	height: auto;
+    height: auto;
+    left: 0px;
+    position: absolute;
 }
+
 td.nav a.t {
-	position: absolute;
-	left: 0px;
-	height: auto;
+    height: auto;
+    left: 0px;
+    position: absolute;
 }
 
 /** tables - character stats (i.e. "vital info") **/
+
 table.vitalinfo { /* the whole vital info 'wrapper' table */
     background-color: #ffffff;
     border: medium ridge #eeeeee;
     width: 200px;
 }
+
 table.charinfo { /* the sub-table with the data */
     background-color: #ffffff;
     width: 200px;
 }
+
 td.charhead { /* vital info category heading */
     background-color: #d4d0c8;
     border: none;
-    cursor: default;
     color: #333333;
+    cursor: default;
 }
-td.charinfo { /* vital info data */
-    padding-left: 20px;
-    border-top: thin solid #d4d0c8;
-    border-right-style: none;
-    border-bottom-style: none; 
+
+td.charinfo {
+    border-bottom-style: none;
     border-left-style: none;
-    cursor: default;
+    border-right-style: none;
+    border-top: thin solid #d4d0c8;
     color: #333333;
+    cursor: default;
+    /* vital info data */
+    padding-left: 20px;
 }
 
 /** tables - main page **/
+
 td.pageheader { /* heading for the main page */
     background-color: #d4d0c8;
     background-image: url(vcpp/mainhdr.gif);
     background-repeat: no-repeat;
     height: 85px;
 }
-td.body { 
+
+td.body {
     font-family: "Courier New", "Lucida Console", monospace;
     font-size: 12px;
 }
 
 /** tables - popups **/
+
 td.popupheader { /* heading in a popup (e.g. motd, yom)*/
     background-color: #d4d0c8;
     height: 50px;
 }
 
 /** tables - footers **/
+
 table.noborder { /* table in the footer */
     border: none;
     height: 75px;
 }
+
 td.footer { /* data for a footer */
     background-image: url(../images/rule.gif);
-    background-repeat: repeat-x;
     background-position: top;
+    background-repeat: repeat-x;
 }
-td.noborder { /* borderless data in the footer */
+
+td.noborder {
+    border: none;
+    /* borderless data in the footer */
     font-family: "Courier New", "Lucida Console", monospace;
     font-size: 12px;
-    border: none;
 }
 
 /** debugging **/
+
 div.debug {
     background-color: #605c54;
-    color: #ffffff;
     border: 1px dotted #ffffff;
-    width: auto;
-    height: auto;
+    color: #ffffff;
     font-size: 11px;
+    height: auto;
+    width: auto;
 }

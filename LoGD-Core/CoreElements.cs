@@ -1,4 +1,5 @@
-﻿using LoGD.Core.Game;
+﻿using System.Collections.Generic;
+using LoGD.Core.Game;
 using LoGD.Core.Game.Scenes;
 using LoGD.Core.Game.Templates;
 
@@ -6,13 +7,14 @@ namespace LoGD.Core
 {
     public static class CoreElements
     {
-        public static Template[] GetTemplates()
+        public static IEnumerable<Template> GetTemplates()
         {
-            return new Template[] { Classic.Template() };
+            return new[] {Classic.Template()};
         }
-        public static Scene[] GetScenes()
+
+        public static IEnumerable<Scene> GetScenes()
         {
-            return new Scene[] { new Home() };
+            return new[] {new Home()};
         }
     }
 }

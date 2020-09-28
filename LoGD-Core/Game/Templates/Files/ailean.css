@@ -6,51 +6,56 @@
 */
 
 /** tables **/
-table {
-}
+table { }
+
 td {
     font-family: "Trebuchet MS", "Verdana", "Helvetica", "Arial", sans-serif;
     font-size: 12px;
 }
 
 /** links **/
+
 a {
     color: #d0a700;
     text-decoration: none;
 }
-a:hover { 
+
+a:hover {
     color: #767676;
     text-decoration: none;
 }
 
 /** input fields (e.g. village chats) **/
+
 input {
-    font-family: "Trebuchet MS", "Verdana", "Helvetica", "Arial", sans-serif;
-    font-size: 12px;
     background-color: #303030;
     border: 1px solid;
     border-color: #000000 #707070 #707070 #000000;
     color: #e7e7e7;
+    font-family: "Trebuchet MS", "Verdana", "Helvetica", "Arial", sans-serif;
+    font-size: 12px;
 }
 
 /** select boxes (e.g. user preference drop-downs) **/
+
 select {
     background-color: #303030;
     border: 1px solid #000000;
     color: #d0a700;
 }
 
-fieldset { 
+fieldset {
     border: 1px solid;
     border-color: #707070 #000000 #000000 #707070;
 }
+
 legend {
-    padding: 3px; 
-    color: #639ace; 
-    font-weight: bold; 
-    margin-top: 0px; 
-    margin-right: 0px;  
+    color: #639ace;
+    font-weight: bold;
     margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    padding: 3px;
 }
 
 /*  --------------------------------------------------------------------
@@ -58,52 +63,57 @@ legend {
 */
 
 /** the main page heading (e.g. "Degolburg, the Capital City", "LoGD News") **/
+
 .pagetitle {
+    color: #e7e7e7;
     font-family: "Trebuchet MS", "Verdana", "Helvetica", "Arial", sans-serif;
     font-size: 14px;
-    font-weight: bold;
     font-style: normal;
-    color: #e7e7e7
+    font-weight: bold;
 }
 
 /** nav menu categories (e.g. City Gates, Store Street, Info) **/
+
 .navhead {
-    text-decoration: none;
-    width: 175px;
+    background: url(ailean/navhdr.gif);
+    background-color: #191919;
     border: 1px solid;
     border-color: #707070 #000000 #000000 #707070;
-    height: auto;
-    padding-left: 2px;
-    line-height: 20px;
-    float: left;
     clear: none;
-    background-color: #191919;
+    float: left;
     font-weight: bold;
+    height: auto;
+    line-height: 20px;
+    padding-left: 2px;
     text-align: left;
-    background: url(ailean/navhdr.gif)
+    text-decoration: none;
+    width: 175px;
 }
 
 /** help for nav menu categories **/
+
 .navhelp {
-    text-decoration: none;
-    width: 175px;
-    height: auto;
-    padding: 1px;
-    float: left;
-    clear: none;
     border: thin none;
     border-color: #707070 #000000 #000000 #707070;
+    clear: none;
+    float: left;
+    height: auto;
+    padding: 1px;
+    text-decoration: none;
+    width: 175px;
 }
 
 /** nav hot keys (e.g. [F]orest, [T]ravel) **/
+
 .navhi {
     color: #d0a700;
-    text-decoration: underline;
     font-weight: bold;
     padding: 1px;
+    text-decoration: underline;
 }
 
 /** input fields (e.g. the textarea in YOMs) **/
+
 .input {
     background-color: #303030;
     border: 1px solid;
@@ -112,73 +122,146 @@ legend {
 }
 
 /** input buttons (e.g. Submit, Search, Add) **/
+
 .button {
-    font-family: "Trebuchet MS", "Verdana", "Helvetica", "Arial", sans-serif;
-    font-size: 12px;  
-    color: #d0a700;
     background-color: #303030;
     border: 1px solid;
     border-color: #707070 #000000 #000000 #707070;
+    color: #d0a700;
+    font-family: "Trebuchet MS", "Verdana", "Helvetica", "Arial", sans-serif;
+    font-size: 12px;
 }
 
-.block { 
-    padding: 3px; 
-    margin-right: 0px;  
-    margin-left: 0px; 
-    margin-bottom: 2px; 
+.block {
     line-height: 120%;
+    margin-bottom: 2px;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding: 3px;
 }
 
 /** text colours **/
-.colDkBlue    { color: #2080ff; }
-.colDkGreen   { color: #009900; }
-.colDkCyan    { color: #009999; }
-.colDkRed     { color: #aa4444; }
+
+.colDkBlue { color: #2080ff; }
+
+.colDkGreen { color: #009900; }
+
+.colDkCyan { color: #009999; }
+
+.colDkRed { color: #aa4444; }
+
 .colDkMagenta { color: #990099; }
-.colDkYellow  { color: #999900; }
-.colDkWhite   { color: #cccccc; }
-.colLtBlue    { color: #74abdf; }
-.colLtGreen   { color: #00ee00; }
-.colLtCyan    { color: #00eeee; }
-.colLtRed     { color: #ee0000; }
+
+.colDkYellow { color: #999900; }
+
+.colDkWhite { color: #cccccc; }
+
+.colLtBlue { color: #74abdf; }
+
+.colLtGreen { color: #00ee00; }
+
+.colLtCyan { color: #00eeee; }
+
+.colLtRed { color: #ee0000; }
+
 .colLtMagenta { color: #ee00ee; }
-.colLtYellow  { color: #eeee00; }
-.colLtWhite   { color: #ffffff; }
-.colLtBlack   { color: #777777; }
-.colDkOrange  { color: #994400; }
-.colLtOrange  { color: #ff9900; }
-.colBlue  	{ color: #0070FF; }
-.colLime  	{ color: #DDFFBB; }
-.colBlack  	{ color: #000000; }
-.colRose 	{ color: #EEBBEE; }
-.colblueviolet 	{ color: #9A5BEE; }
-.coliceviolet	{ color: #AABBEE; }
-.colLtBrown 	{ color: #F8DB83; }
-.colDkBrown 	{ color: #6b563f; }
-.colXLtGreen	{ color: #aaff99; }
-.colAttention 	{ background-color: #00FF00; color: #FF0000; }
-.colWhiteBlack 	{ background-color: #FFFFFF; color: #000000; }
-.colbeige  { color: #F5F5DC; }
-.colkhaki  { color: #F0E68C; }
-.coldarkkhaki  { color: #BDB76B; }
-.colaquamarine  { color: #7FFFD4; }
-.coldarkseagreen  { color: #8FBC8F; }
-.collightsalmon  { color: #FFA07A; }
-.colsalmon  { color: #FA8072; }
-.colwheat  { color: #F5DEB3; }
-.coltan  { color: #D2B48C; }.colBack  	{ background-color: #00FFFF; color: #000000; }
+
+.colLtYellow { color: #eeee00; }
+
+.colLtWhite { color: #ffffff; }
+
+.colLtBlack { color: #777777; }
+
+.colDkOrange { color: #994400; }
+
+.colLtOrange { color: #ff9900; }
+
+.colBlue { color: #0070FF; }
+
+.colLime { color: #DDFFBB; }
+
+.colBlack { color: #000000; }
+
+.colRose { color: #EEBBEE; }
+
+.colblueviolet { color: #9A5BEE; }
+
+.coliceviolet { color: #AABBEE; }
+
+.colLtBrown { color: #F8DB83; }
+
+.colDkBrown { color: #6b563f; }
+
+.colXLtGreen { color: #aaff99; }
+
+.colAttention {
+    background-color: #00FF00;
+    color: #FF0000;
+}
+
+.colWhiteBlack {
+    background-color: #FFFFFF;
+    color: #000000;
+}
+
+.colbeige { color: #F5F5DC; }
+
+.colkhaki { color: #F0E68C; }
+
+.coldarkkhaki { color: #BDB76B; }
+
+.colaquamarine { color: #7FFFD4; }
+
+.coldarkseagreen { color: #8FBC8F; }
+
+.collightsalmon { color: #FFA07A; }
+
+.colsalmon { color: #FA8072; }
+
+.colwheat { color: #F5DEB3; }
+
+.coltan { color: #D2B48C; }
+
+.colBack {
+    background-color: #00FFFF;
+    color: #000000;
+}
+
 .colLtLinkBlue { color: #0099FF; }
+
 .colDkLinkBlue { color: #006BB3; }
+
 .colDkRust { color: #8D6060; }
+
 .colLtRust { color: #B07878; }
+
 .colMdBlue { color: #0000F0; }
+
 .colMdGrey { color: #DDDDDD; }
+
 .colburlywood { color: #DEB887; }
+
 /** table rows (e.g. Game Setup Info, Hall o' Fame) **/
-.trhead  { background-color:#d6d6d6; color:#000000; }
-.trlight { background-color:#414141; color:#d0a700; }
-.trdark  { background-color:#191919; color:#d0a700; }
-.trhilight { background-color: #303030; color: #d0a700}
+
+.trhead {
+    background-color: #d6d6d6;
+    color: #000000;
+}
+
+.trlight {
+    background-color: #414141;
+    color: #d0a700;
+}
+
+.trdark {
+    background-color: #191919;
+    color: #d0a700;
+}
+
+.trhilight {
+    background-color: #303030;
+    color: #d0a700
+}
 
 
 /*  --------------------------------------------------------------------
@@ -186,143 +269,164 @@ legend {
 */
 
 /** links - navigation **/
-a.nav { /* nav link (e.g. Forest, Quit, Travel) */
-    text-decoration: none;
-    width: 176px;
-    height: auto;
-    padding: 1px;
-    float: left; 
-    clear: none;
+
+a.nav {
     background-color: #272727;
     border-left: 0px solid #707070;
+    clear: none;
+    float: left;
+    height: auto;
+    padding: 1px;
+    /* nav link (e.g. Forest, Quit, Travel) */
+    text-decoration: none;
+    width: 176px;
 }
+
 a:hover.nav { /* nav link on mouseover */
     background-color: #636363;
     color: #d0a700;
 }
 
 /** for adding things to the bottom of the nav table */
-div.nav { 
-    text-decoration: none;
-    width: 170px;
-    height: auto;
-    padding: 1px 1px 1px 4px;
-    float: left; 
-    clear: none;
+
+div.nav {
     background-color: #272727;
+    border-bottom: 1px solid #000000;
     border-left: 1px solid #707070;
     border-right: 1px solid #000000;
-    border-bottom: 1px solid #000000;
+    clear: none;
+    float: left;
+    height: auto;
     margin-left: 2px;
+    padding: 1px 1px 1px 4px;
+    text-decoration: none;
+    width: 170px;
 }
 
 
 /** links - motd **/
-a.motd { /* for motd, yom, and petition */
-    text-decoration: none;
-    text-align: center;
-    color:#d0a700;
-    width: auto;
-    height: auto;
-    clear: none;
+
+a.motd {
     background-color: #303030;
-}
-a:hover.motd { /* mouseover for motd, yom, and petition */
+    clear: none;
+    color: #d0a700;
     height: auto;
+    text-align: center;
+    /* for motd, yom, and petition */
+    text-decoration: none;
     width: auto;
+}
+
+a:hover.motd {
     background-color: #303030;
     color: #767676;
-}
-a.hotmotd { /* when a new motd or yom is available */
-    font-weight: bold;
-    text-decoration: none;
-    text-align: center;
-    color:#d0a700;
-    width: auto;
+    /* mouseover for motd, yom, and petition */
     height: auto;
-    clear: none;
+    width: auto;
+}
+
+a.hotmotd {
     background-color: #303030;
+    clear: none;
+    color: #d0a700;
+    /* when a new motd or yom is available */
+    font-weight: bold;
+    height: auto;
+    text-align: center;
+    text-decoration: none;
+    width: auto;
 }
 
 /** links - translator tool **/
-a.t { 
-    width: 8px;
-    height: 11px;
+
+a.t {
+    background-color: #303030;
     border: 1px dotted #0000ee;
-    background-color: #303030;
     color: #d0a700;
     font-size: 11px;
-    text-decoration: none;
-    padding-left: 1px;
-    padding-right: 1px;
-}
-a.thot { 
-    width: 8px;
     height: 11px;
-    border: 1px solid #ee0000;
-    background-color: #303030;
-    color: #d0a700;
-    font-size: 11px;
-    text-decoration: none;
     padding-left: 1px;
     padding-right: 1px;
+    text-decoration: none;
+    width: 8px;
+}
+
+a.thot {
+    background-color: #303030;
+    border: 1px solid #ee0000;
+    color: #d0a700;
+    font-size: 11px;
+    height: 11px;
+    padding-left: 1px;
+    padding-right: 1px;
+    text-decoration: none;
+    width: 8px;
 }
 
 /** tables - navigation **/
+
 table.nav {
     background-color: #272727;
     border-left: 1px solid #707070;
     border-right: 1px solid #000000;
     width: 175px;
 }
+
 td.nav a.thot {
-    position: absolute;
-    left: 0px;
     height: auto;
+    left: 0px;
+    position: absolute;
 }
+
 td.nav a.t {
-    position: absolute;
-    left: 0px;
     height: auto;
+    left: 0px;
+    position: absolute;
 }
 
 /** tables - character stats (i.e. "vital info") **/
+
 table.vitalinfo { /* the whole vital info 'wrapper' table */
     background-color: #303030;
     border: none;
     width: auto;
 }
+
 table.charinfo { /* the sub-table with the data */
     background-color: #303030;
-    width: auto;
     border-left: 1px solid #707070;
     border-right: 1px solid #000000;
-
+    width: auto;
 }
-td.charhead { /* vital info category heading */
-    padding-left: 2px;
+
+td.charhead {
+    background: url(ailean/navhdr.gif);
     background-color: #191919;
+    border: 1px solid;
+    border-color: #707070 #000000 #000000 #707070;
     border-top: none;
     cursor: default;
     font-weight: bold;
-    background: url(ailean/navhdr.gif);
-    border: 1px solid;
-    border-color: #707070 #000000 #000000 #707070;
+    /* vital info category heading */
+    padding-left: 2px;
 }
-td.charinfo { /* vital info data */
-    padding-left: 8px;
-    /*border-top: 1px solid #707070;*/
+
+td.charinfo { /*border-top: 1px solid #707070;*/
     border-bottom: 1px solid #000000;
     cursor: default;
+    /* vital info data */
+    padding-left: 8px;
 }
 
 /** tables - main page **/
+
 td.pageheader { /* heading for the main page */
     background-color: #303030;
     border-bottom: 2px solid #000000;
 }
 
 /** tables - popups **/
+
 td.popupheader { /* heading in a popup (e.g. motd, yom)*/
     background-color: #303030;
     border-bottom: 2px solid #000000;
@@ -330,28 +434,31 @@ td.popupheader { /* heading in a popup (e.g. motd, yom)*/
 }
 
 /** tables - footers **/
+
 table.noborder { /* table in the footer */
     border: none;
-    
 }
+
 table.withborder { /* table in the footer */
     border-top: 2px solid #000000;
 }
+
 td.footer { /* data for a footer */
     /*border-top: thin solid #663300;*/
     background-position: top;
 }
+
 td.noborder { /* borderless data in the footer */
     border: none;
 }
 
 /** debugging **/
+
 div.debug {
     background-color: #000000;
-    color: #e7e7e7;
     border: 1px dotted #707070;
-    width: auto;
-    height: auto;
+    color: #e7e7e7;
     font-size: 11px;
+    height: auto;
+    width: auto;
 }
-

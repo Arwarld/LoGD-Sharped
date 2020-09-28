@@ -2,16 +2,16 @@
 
 namespace LoGD.Core.Game.Scenes
 {
-    class Home : Scene
+    internal sealed class Home : Scene
     {
-        public override string Show(int userID, ReadOnlyDictionary<string, string> getValues, Database db)
-        {
-            return "";
-        }
         public Home()
             : base("home", true, false)
         {
+        }
 
+        public override string Show(int userId, ReadOnlyDictionary<string, string> getValues, Database db)
+        {
+            return "";
         }
     }
 }
