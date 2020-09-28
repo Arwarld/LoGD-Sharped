@@ -1,8 +1,12 @@
-﻿using System;
+﻿#region
+
+using System;
+
+#endregion
 
 namespace LoGD.Core.Game.Data.Lib
 {
-    public sealed class DatabaseColumn
+    internal sealed class DatabaseColumn
     {
         internal DatabaseColumn(string name, Type dataType, string length, bool signLess, bool notnull,
             string defaultValue)

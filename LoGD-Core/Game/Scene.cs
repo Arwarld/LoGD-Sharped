@@ -1,4 +1,8 @@
-﻿using System.Collections.ObjectModel;
+﻿#region
+
+using System.Collections.ObjectModel;
+
+#endregion
 
 namespace LoGD.Core.Game
 {

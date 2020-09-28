@@ -1,5 +1,9 @@
-﻿using LoGD.Core.Game.Data.Lib;
+﻿#region
+
+using LoGD.Core.Game.Data.Lib;
 using MySql.Data.MySqlClient;
+
+#endregion
 
 namespace LoGD.Core.Game.Data
 {

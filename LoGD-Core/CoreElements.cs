@@ -1,7 +1,11 @@
-﻿using System.Collections.Generic;
+﻿#region
+
+using System.Collections.Generic;
 using LoGD.Core.Game;
 using LoGD.Core.Game.Scenes;
 using LoGD.Core.Game.Templates;
+
+#endregion
 
 namespace LoGD.Core
 {

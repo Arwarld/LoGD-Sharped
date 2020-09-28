@@ -1,8 +1,12 @@
-﻿using System.Collections.Generic;
+﻿#region
+
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Data;
 using System.Data.Common;
 using MySql.Data.MySqlClient;
+
+#endregion
 
 namespace LoGD.Core.Game.Data.Lib
 {
@@ -10,8 +14,8 @@ namespace LoGD.Core.Game.Data.Lib
     {
         private readonly List<string> _changedValues;
         private readonly Dictionary<string, object> _newValues;
-        internal readonly ReadOnlyDictionary<string, object> NewValues;
         private readonly DatabaseTable<T, TValue> _parent;
+        internal readonly ReadOnlyDictionary<string, object> NewValues;
         protected readonly Dictionary<string, object> Values;
 
         protected DatabaseRow(DatabaseTable<T, TValue> parent)
@@ -20,7 +24,7 @@ namespace LoGD.Core.Game.Data.Lib
             _changedValues = new List<string>();
             _newValues = new Dictionary<string, object>();
             NewValues = new ReadOnlyDictionary<string, object>(_newValues);
-            this._parent = parent;
+            _parent = parent;
         }
 
         protected DatabaseRow(DatabaseTable<T, TValue> parent, MySqlDataReader reader)

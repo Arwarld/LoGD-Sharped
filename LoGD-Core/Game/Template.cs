@@ -2,28 +2,29 @@
 {
     public sealed class Template
     {
-        internal Template(string name, string popuphead, string popupfoot, string header, string footer, string statstart,
+        internal Template(string name, string popuphead, string popupfoot, string header, string footer,
+            string statstart,
             string stathead, string statrow, string statbuff, string statend, string navhead, string navhelp,
             string navitem, string petitioncount, string adwrapper, string login, string loginfull, string collapse)
         {
-            this.Popuphead = popuphead;
-            this.Popupfoot = popupfoot;
-            this.Header = header;
-            this.Footer = footer;
-            this.Statstart = statstart;
-            this.Stathead = stathead;
-            this.Statrow = statrow;
-            this.Statbuff = statbuff;
-            this.Statend = statend;
-            this.Navhead = navhead;
-            this.Navhelp = navhelp;
-            this.Navitem = navitem;
-            this.Petitioncount = petitioncount;
-            this.Adwrapper = adwrapper;
-            this.Login = login;
-            this.Loginfull = loginfull;
-            this.Collapse = collapse;
-            this.Name = name;
+            Popuphead = popuphead;
+            Popupfoot = popupfoot;
+            Header = header;
+            Footer = footer;
+            Statstart = statstart;
+            Stathead = stathead;
+            Statrow = statrow;
+            Statbuff = statbuff;
+            Statend = statend;
+            Navhead = navhead;
+            Navhelp = navhelp;
+            Navitem = navitem;
+            Petitioncount = petitioncount;
+            Adwrapper = adwrapper;
+            Login = login;
+            Loginfull = loginfull;
+            Collapse = collapse;
+            Name = name;
         }
 
         public string Popuphead { get; }

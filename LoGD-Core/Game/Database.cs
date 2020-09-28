@@ -1,16 +1,20 @@
-﻿using System.Collections.ObjectModel;
+﻿#region
+
+using System.Collections.ObjectModel;
 using LoGD.Core.Game.Data;
 using LoGD.Core.Game.Data.Lib;
 using MySql.Data.MySqlClient;
+
+#endregion
 
 namespace LoGD.Core.Game
 {
     public sealed class Database
     {
-        private readonly string _prefix;
         private readonly DatabaseTable<uint, Armor> _armorTable;
-        public ReadOnlyDictionary<uint, Armor> ArmorTable;
         private readonly MySqlConnection _connection;
+        private readonly string _prefix;
+        public ReadOnlyDictionary<uint, Armor> ArmorTable;
 
         public Database(string host, string port, string user, string password, string database, string prefix)
         {

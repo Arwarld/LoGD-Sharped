@@ -1,30 +1,34 @@
-﻿using System;
+﻿#region
+
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Data;
 using MySql.Data.MySqlClient;
+
+#endregion
 
 namespace LoGD.Core.Game.Data.Lib
 {
     public sealed class DatabaseTable<TKey, TValue> where TValue : DatabaseRow<TKey, TValue>
     {
         private readonly bool _autoIncrement;
-        internal readonly DatabaseColumn[] TableDef;
         private readonly MySqlConnection _connection;
-        private string _primaryKey;
         private readonly Dictionary<TKey, TValue> _rows;
-        internal readonly ReadOnlyDictionary<TKey, TValue> Data;
         private readonly string _tableName;
+        internal readonly ReadOnlyDictionary<TKey, TValue> Data;
+        internal readonly DatabaseColumn[] TableDef;
+        private string _primaryKey;
 
         internal DatabaseTable(MySqlConnection connection, string tableName, bool autoIncrement,
             params DatabaseColumn[] tableDef)
         {
             _rows = new Dictionary<TKey, TValue>();
             Data = new ReadOnlyDictionary<TKey, TValue>(_rows);
-            this._connection = connection;
-            this._tableName = tableName;
-            this._autoIncrement = autoIncrement;
-            this.TableDef = tableDef;
+            _connection = connection;
+            _tableName = tableName;
+            _autoIncrement = autoIncrement;
+            TableDef = tableDef;
         }
 
         public DatabaseRow<TKey, TValue> this[TKey key] => _rows[key];
@@ -58,9 +62,10 @@ namespace LoGD.Core.Game.Data.Lib
         {
             MySqlCommand update = _connection.CreateCommand();
             update.CommandText = "UPDATE " + _tableName + " SET ";
-            foreach (KeyValuePair<string, object> value in values) update.CommandText += value.Key + "='" + value.Value + "',";
+            foreach (KeyValuePair<string, object> value in values)
+                update.CommandText += value.Key + "='" + value.Value + "',";
             update.CommandText = update.CommandText.TrimEnd(',');
-            update.CommandText += " WHERE " + this._primaryKey + " = " + primaryKey + ";";
+            update.CommandText += " WHERE " + _primaryKey + " = " + primaryKey + ";";
             return update.ExecuteNonQuery() == 1;
         }
 
