@@ -1,3 +1,5 @@
+#region
+
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
@@ -10,6 +12,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Hosting;
 
+#endregion
+
 namespace LoGD.Server
 {
     public sealed class Startup
@@ -18,7 +22,7 @@ namespace LoGD.Server
 
         public Startup(IConfiguration configuration)
         {
-            this._configuration = configuration;
+            _configuration = configuration;
         }
 
         public void ConfigureServices(IServiceCollection services)
@@ -62,7 +66,8 @@ namespace LoGD.Server
                 {
                     string location = context.Request.RouteValues["location"].ToString();
                     string parameters = context.Request.RouteValues["params"].ToString();
-                    if (location != null && parameters?.Contains(".") == false && !location.Contains(".") && parameters != "" && parameters.Length > 4 && parameters.Substring(0, 4) == "php?")
+                    if (location != null && parameters?.Contains(".") == false && !location.Contains(".") &&
+                        parameters != "" && parameters.Length > 4 && parameters.Substring(0, 4) == "php?")
                     {
                         parameters = parameters.Substring(4);
                         Dictionary<string, string> getParams = new Dictionary<string, string>();
