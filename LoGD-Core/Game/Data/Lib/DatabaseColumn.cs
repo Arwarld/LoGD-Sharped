@@ -8,22 +8,22 @@ namespace LoGD.Core.Game.Data.Lib
 {
     internal sealed class DatabaseColumn
     {
-        internal DatabaseColumn(string name, Type dataType, string length, bool signLess, bool notnull,
-            string defaultValue)
+        internal DatabaseColumn(string name, Type dataType, string length, bool notnull, string defaultValue,
+            string extra = "")
         {
             Name = name;
             DataType = dataType;
             Length = length;
-            SignLess = signLess;
             NotNull = notnull;
             DefaultValue = defaultValue;
+            Extra = extra;
         }
 
+        internal Type DataType { get; }
+        internal string Extra { get; }
+        internal string Length { get; }
         internal string Name { get; }
-        private Type DataType { get; }
-        private string Length { get; }
-        private bool SignLess { get; }
-        private bool NotNull { get; }
-        private string DefaultValue { get; }
+        internal bool NotNull { get; }
+        internal string DefaultValue { get; }
     }
 }

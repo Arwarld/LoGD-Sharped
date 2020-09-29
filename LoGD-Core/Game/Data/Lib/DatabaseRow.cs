@@ -46,7 +46,21 @@ namespace LoGD.Core.Game.Data.Lib
                     Values.Add(col.Name, reader.GetValue(col.Name));
         }
 
-        internal abstract T GetPrimaryKey();
+        internal object PrimaryKey(int col)
+        {
+            return Values[_parent.PrimaryKeyColums[col]];
+        }
+
+        internal T PrimaryKey()
+        {
+            if (_parent.PrimaryKeyColums.Length == 1)
+                return (T) PrimaryKey(0);
+
+            object[] primarykey = new object[_parent.PrimaryKeyColums.Length];
+            for (int i = 0; i < primarykey.Length; i++)
+                primarykey[i] = PrimaryKey(i);
+            return (T) (object) primarykey;
+        }
 
         internal void ChangeValue(string name, object value)
         {
@@ -60,7 +74,7 @@ namespace LoGD.Core.Game.Data.Lib
 
         public bool Update()
         {
-            if (!_parent.UpdateData(GetPrimaryKey(), new ReadOnlyDictionary<string, object>(_newValues)))
+            if (!_parent.UpdateData((TValue) this))
                 return false;
 
             UpdateLocal();

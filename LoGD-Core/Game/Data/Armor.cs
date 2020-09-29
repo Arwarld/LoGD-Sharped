@@ -48,10 +48,5 @@ namespace LoGD.Core.Game.Data
             get => (int) Values["level"];
             set => ChangeValue("level", value);
         }
-
-        internal override uint GetPrimaryKey()
-        {
-            return (uint) Values["armorid"];
-        }
     }
 }

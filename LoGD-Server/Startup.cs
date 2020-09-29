@@ -57,7 +57,8 @@ namespace LoGD.Server
                 });
             }
 
-            var g = new GameMaster(_configuration.GetValue<string>("host"), _configuration.GetValue<string>("port"),
+            GameMaster g = new GameMaster(_configuration.GetValue<string>("host"),
+                _configuration.GetValue<string>("port"),
                 _configuration.GetValue<string>("user"), _configuration.GetValue<string>("password"),
                 _configuration.GetValue<string>("database"), _configuration.GetValue<string>("prefix"));
             app.UseEndpoints(endpoints =>
