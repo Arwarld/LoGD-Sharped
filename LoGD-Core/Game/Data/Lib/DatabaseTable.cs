@@ -1,6 +1,7 @@
 ﻿#region
 
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -10,7 +11,8 @@ using MySql.Data.MySqlClient;
 
 namespace LoGD.Core.Game.Data.Lib
 {
-    public sealed class DatabaseTable<TKey, TValue> where TValue : DatabaseRow<TKey, TValue>
+    public sealed class DatabaseTable<TKey, TValue> : IEnumerable<KeyValuePair<TKey, TValue>>
+        where TValue : DatabaseRow<TKey, TValue>
     {
         private readonly bool _autoIncrement;
         private readonly string _connectionString;
@@ -38,6 +40,16 @@ namespace LoGD.Core.Game.Data.Lib
 
         public DatabaseRow<TKey, TValue> this[TKey key] => _rows[key];
 
+        public IEnumerator<KeyValuePair<TKey, TValue>> GetEnumerator()
+        {
+            return _rows.GetEnumerator();
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return _rows.GetEnumerator();
+        }
+
         private string TypeToSqlString(Type type, string length)
         {
             switch (type.Name)
@@ -56,6 +68,7 @@ namespace LoGD.Core.Game.Data.Lib
         private bool CheckTable()
         {
             using MySqlConnection connection = new MySqlConnection(_connectionString);
+            connection.Open();
             using MySqlCommand describeCommand = connection.CreateCommand();
             describeCommand.CommandText = "DESCRIBE " + _tableName + ";";
             MySqlDataReader describeReader = describeCommand.ExecuteReader();
@@ -124,6 +137,7 @@ namespace LoGD.Core.Game.Data.Lib
         private void LoadData()
         {
             using MySqlConnection connection = new MySqlConnection(_connectionString);
+            connection.Open();
             using MySqlCommand command = connection.CreateCommand();
             command.CommandText = "SELECT * FROM " + _tableName + ";";
             MySqlDataReader reader = command.ExecuteReader();
@@ -140,6 +154,7 @@ namespace LoGD.Core.Game.Data.Lib
         internal bool UpdateData(TValue value)
         {
             using MySqlConnection connection = new MySqlConnection(_connectionString);
+            connection.Open();
             using MySqlCommand update = connection.CreateCommand();
             update.CommandText = "UPDATE " + _tableName + " SET ";
             foreach (KeyValuePair<string, object> values in value.NewValues)
@@ -170,6 +185,7 @@ namespace LoGD.Core.Game.Data.Lib
                 return false;
 
             using MySqlConnection connection = new MySqlConnection(_connectionString);
+            connection.Open();
             using MySqlCommand insert = connection.CreateCommand();
 
             insert.CommandText = "INSERT INTO " + _tableName + " ";
