@@ -16,6 +16,7 @@ namespace LoGD.Core.Game.Data.Lib
     {
         private readonly bool _autoIncrement;
         private readonly string _connectionString;
+        private readonly int _keyCount;
         private readonly string[][] _keys;
         private readonly Dictionary<TKey, TValue> _rows;
         private readonly string _tableName;
@@ -32,6 +33,10 @@ namespace LoGD.Core.Game.Data.Lib
             TableDef = tableDef;
             _keys = keys;
             PrimaryKeyColums = primaryKeyColums;
+            _keyCount = primaryKeyColums.Length;
+            foreach (string[] keycols in keys)
+                _keyCount += keycols.Length - 1;
+
             if (CheckTable())
                 LoadData();
             else
@@ -55,11 +60,23 @@ namespace LoGD.Core.Game.Data.Lib
             switch (type.Name)
             {
                 case "String":
-                    return "varchar(" + length + ")";
+                    if (int.Parse(length) <= 255)
+                        return "varchar(" + length + ")";
+
+                    return int.Parse(length) <= 65535 ? "text" : "mediumtext";
+
                 case "UInt32":
                     return "int(" + length + ") unsigned";
                 case "Int32":
                     return "int(" + length + ")";
+                case "Byte":
+                    return "tinyint(" + length + ") unsigned";
+                case "SByte":
+                    return "tinyint(" + length + ")";
+                case "DateTime":
+                    return "datetime";
+                case "Double":
+                    return "double unsigned";
             }
 
             return "";
@@ -77,6 +94,7 @@ namespace LoGD.Core.Game.Data.Lib
                 {
                     if (describeReader.GetString("Field") != TableDef[pos].Name)
                         return false;
+                    Console.WriteLine(describeReader.GetString("Type"));
                     if (describeReader.GetString("Type") !=
                         TypeToSqlString(TableDef[pos].DataType, TableDef[pos].Length))
                         return false;
@@ -101,32 +119,32 @@ namespace LoGD.Core.Game.Data.Lib
             using MySqlCommand indexesCommand = connection.CreateCommand();
             indexesCommand.CommandText = "SHOW INDEXES FROM " + _tableName + ";";
             MySqlDataReader indexesReader = indexesCommand.ExecuteReader();
-            if (!indexesReader.HasRows) return true;
+            if (!indexesReader.HasRows && PrimaryKeyColums.Length + _keys.Length == 0) return true;
 
             int key = 0;
-            int keypos = 0;
-            for (int pos = 0; indexesReader.Read(); pos++)
-                if (pos < PrimaryKeyColums.Length)
+            int keypos = 1;
+            int keyschecked = 0;
+            for (; indexesReader.Read(); keyschecked++)
+                if (keyschecked < PrimaryKeyColums.Length)
                 {
-                    if (indexesReader.GetString("Key_name") != "PRIMARY")
-                        return false;
-                    if (indexesReader.GetString("Column_name") != PrimaryKeyColums[pos])
+                    if (indexesReader.GetString("Key_name") != "PRIMARY" ||
+                        indexesReader.GetString("Column_name") != PrimaryKeyColums[keyschecked])
                         return false;
                 }
                 else
                 {
-                    if (indexesReader.GetString("Key_name") != _keys[key][0])
-                        return false;
-                    if (indexesReader.GetString("Column_name") != _keys[key][keypos++])
+                    if (key >= _keys.Length || keypos >= _keys[key].Length ||
+                        indexesReader.GetString("Key_name") != _keys[key][0] ||
+                        indexesReader.GetString("Column_name") != _keys[key][keypos++])
                         return false;
 
                     if (_keys[key].Length != keypos) continue;
 
                     key++;
-                    keypos = 0;
+                    keypos = 1;
                 }
 
-            return true;
+            return keyschecked == _keyCount;
         }
 
         public TValue NewElement()
