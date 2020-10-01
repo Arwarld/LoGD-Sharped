@@ -10,15 +10,16 @@ using MySql.Data.MySqlClient;
 
 namespace LoGD.Core.Game.Data.Lib
 {
-    public abstract class DatabaseRow<T, TValue> where TValue : DatabaseRow<T, TValue>
+    public abstract class DatabaseRow<TKey, TValue> where TValue : DatabaseRow<TKey, TValue>
     {
         private readonly List<string> _changedValues;
         private readonly Dictionary<string, object> _newValues;
-        private readonly DatabaseTable<T, TValue> _parent;
+        private readonly TKey _overridePrimaryKey;
+        private readonly DatabaseTable<TKey, TValue> _parent;
         internal readonly ReadOnlyDictionary<string, object> NewValues;
         protected readonly Dictionary<string, object> Values;
 
-        protected DatabaseRow(DatabaseTable<T, TValue> parent)
+        protected DatabaseRow(DatabaseTable<TKey, TValue> parent)
         {
             Values = new Dictionary<string, object>();
             _changedValues = new List<string>();
@@ -27,10 +28,22 @@ namespace LoGD.Core.Game.Data.Lib
             _parent = parent;
         }
 
-        protected DatabaseRow(DatabaseTable<T, TValue> parent, MySqlDataReader reader)
+        protected DatabaseRow(DatabaseTable<TKey, TValue> parent, TKey overridePrimaryKey)
+            : this(parent)
+        {
+            _overridePrimaryKey = overridePrimaryKey;
+        }
+
+        protected DatabaseRow(DatabaseTable<TKey, TValue> parent, MySqlDataReader reader)
             : this(parent)
         {
             ReadData(reader);
+        }
+
+        protected DatabaseRow(DatabaseTable<TKey, TValue> parent, MySqlDataReader reader, TKey overridePrimaryKey)
+            : this(parent, reader)
+        {
+            _overridePrimaryKey = overridePrimaryKey;
         }
 
         public object this[string name] => Values[name];
@@ -51,15 +64,20 @@ namespace LoGD.Core.Game.Data.Lib
             return Values[_parent.PrimaryKeyColums[col]];
         }
 
-        internal T PrimaryKey()
+        internal TKey PrimaryKey()
         {
-            if (_parent.PrimaryKeyColums.Length == 1)
-                return (T) PrimaryKey(0);
+            switch (_parent.PrimaryKeyColums.Length)
+            {
+                case 0:
+                    return _overridePrimaryKey;
+                case 1:
+                    return (TKey) PrimaryKey(0);
+            }
 
             object[] primarykey = new object[_parent.PrimaryKeyColums.Length];
             for (int i = 0; i < primarykey.Length; i++)
                 primarykey[i] = PrimaryKey(i);
-            return (T) (object) primarykey;
+            return (TKey) (object) primarykey;
         }
 
         internal void ChangeValue(string name, object value)

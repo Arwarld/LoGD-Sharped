@@ -22,6 +22,7 @@ namespace LoGD.Core.Game.Data.Lib
         private readonly string _tableName;
         internal readonly string[] PrimaryKeyColums;
         internal readonly DatabaseColumn[] TableDef;
+        private int _nextCustemKey;
 
         internal DatabaseTable(string connectionString, string tableName, bool autoIncrement, string[] primaryKeyColums,
             string[][] keys, params DatabaseColumn[] tableDef)
@@ -34,6 +35,9 @@ namespace LoGD.Core.Game.Data.Lib
             _keys = keys;
             PrimaryKeyColums = primaryKeyColums;
             _keyCount = primaryKeyColums.Length;
+            if (_keyCount == 0)
+                _nextCustemKey = 0;
+
             foreach (string[] keycols in keys)
                 _keyCount += keycols.Length - 1;
 
@@ -41,6 +45,12 @@ namespace LoGD.Core.Game.Data.Lib
                 LoadData();
             else
                 throw new NotImplementedException("Table not in correct shape!");
+        }
+
+        internal DatabaseTable(string connectionString, string tableName, bool autoIncrement, string[] primaryKeyColums,
+            params DatabaseColumn[] tableDef) : this(connectionString, tableName, autoIncrement, primaryKeyColums,
+            new string[0][], tableDef)
+        {
         }
 
         public DatabaseRow<TKey, TValue> this[TKey key] => _rows[key];
@@ -62,7 +72,6 @@ namespace LoGD.Core.Game.Data.Lib
                 case "String":
                     if (int.Parse(length) <= 255)
                         return "varchar(" + length + ")";
-
                     return int.Parse(length) <= 65535 ? "text" : "mediumtext";
 
                 case "UInt32":
@@ -77,6 +86,8 @@ namespace LoGD.Core.Game.Data.Lib
                     return "datetime";
                 case "Double":
                     return "double unsigned";
+                case "Single":
+                    return "float(" + length + ")";
             }
 
             return "";
@@ -97,7 +108,14 @@ namespace LoGD.Core.Game.Data.Lib
                     Console.WriteLine(describeReader.GetString("Type"));
                     if (describeReader.GetString("Type") !=
                         TypeToSqlString(TableDef[pos].DataType, TableDef[pos].Length))
-                        return false;
+                        if (!(describeReader.GetString("Type") == "tinytext" &&
+                              TypeToSqlString(TableDef[pos].DataType, TableDef[pos].Length) == "varchar(255)"))
+                            if (!(describeReader.GetString("Type") == "double" &&
+                                  TypeToSqlString(TableDef[pos].DataType, TableDef[pos].Length) == "double unsigned"))
+                                if (!(describeReader.GetString("Type") == "date" &&
+                                      TypeToSqlString(TableDef[pos].DataType, TableDef[pos].Length) == "datetime"))
+                                    return false;
+
                     if (describeReader.GetString("Null") != (TableDef[pos].NotNull ? "NO" : "YES"))
                         return false;
 
@@ -149,7 +167,9 @@ namespace LoGD.Core.Game.Data.Lib
 
         public TValue NewElement()
         {
-            return (TValue) Activator.CreateInstance(typeof(TValue), this);
+            return (TValue) (_keyCount > 0
+                ? Activator.CreateInstance(typeof(TValue), this)
+                : Activator.CreateInstance(typeof(TValue), this, _nextCustemKey++));
         }
 
         private void LoadData()
@@ -162,7 +182,10 @@ namespace LoGD.Core.Game.Data.Lib
             if (reader.HasRows)
                 while (reader.Read())
                 {
-                    TValue data = (TValue) Activator.CreateInstance(typeof(TValue), this, reader);
+                    TValue data = (TValue) (_keyCount > 0
+                        ? Activator.CreateInstance(typeof(TValue), this, reader)
+                        : Activator.CreateInstance(typeof(TValue), this, reader, _nextCustemKey++));
+
                     if (data != null) _rows.Add(data.PrimaryKey(), data);
                 }
 

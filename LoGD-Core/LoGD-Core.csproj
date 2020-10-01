@@ -14,6 +14,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Game\Data\Commentary.cs~RF6df497cb.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Game\Images\" />
   </ItemGroup>
 

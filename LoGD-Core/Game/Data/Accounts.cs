@@ -252,7 +252,7 @@ namespace LoGD.Core.Game.Data
             set => ChangeValue("login", value);
         }
 
-        public DateTime LastMoTD
+        public DateTime LastMoTd
         {
             get => (DateTime) Values["lastmotd"];
             set => ChangeValue("lastmotd", value);
@@ -318,7 +318,7 @@ namespace LoGD.Core.Game.Data
             set => ChangeValue("gentimecount", value);
         }
 
-        public string LastIP
+        public string LastIp
         {
             get => (string) Values["lastip"];
             set => ChangeValue("lastip", value);
@@ -366,7 +366,7 @@ namespace LoGD.Core.Game.Data
             set => ChangeValue("prefs", value);
         }
 
-        public DateTime PVPFlag
+        public DateTime PvpFlag
         {
             get => (DateTime) Values["pvpflag"];
             set => ChangeValue("pvpflag", value);
@@ -480,7 +480,7 @@ namespace LoGD.Core.Game.Data
             set => ChangeValue("amountouttoday", value);
         }
 
-        public byte PK
+        public byte Pk
         {
             get => (byte) Values["pk"];
             set => ChangeValue("pk", value);
